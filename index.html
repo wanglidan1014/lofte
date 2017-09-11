@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 视口属性 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>title</title>
+    <!-- 使用js 来修改 rem的的大小 -->
+    <script>
+        // 这里除以的份数 取决于 我们在设计图中转换时 除以的分数 这里以10来计算会方便一些
+        document.querySelector('html').style.fontSize = window.screen.width / 10 + 'px';
+        //      console.log(a);
+    </script>
+
+    <!--导入swiper的css-->
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+
+    <!-- 导入 css -->
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+<!--顶级的swiper-->
+<div class="root-swiper-container swiper-container">
+    <div class="swiper-wrapper">
+
+        <!--首页区域-->
+        <div class="swiper-slide slideA">
+            <div class="swiper-container slideA-container">
+                <!--首页分页器-->
+                <div id="slideA-pagination" class="slideA-pagination swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias
+                        dignissimos doloribus ducimus ea exercitationem, explicabo fuga, fugit hic illum laboriosam
+                        laborum nesciunt, quidem repellendus sapiente sequi tenetur vero voluptatibus.
+                    </div>
+
+                    <!--首页的订阅-->
+                    <div class="swiper-slide">
+                        <h2>推荐订阅</h2>
+                        <div class="items">
+                            <div class=item>
+                                <div class="left">
+                                    <a href="#"><img src="./images/02.head-icons/lofter_header_icon_%20(84).jpg" alt=""></a>
+                                </div>
+                                <div class="right">
+                                    <div class="pl">
+                                        <p>cospaly</p>
+                                        <p>89965 人订阅</p>
+                                    </div>
+                                    <div class="pr">
+                                        <a href="#">订阅</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class=item>
+                                <div class="left">
+                                    <a href="#"><img src="./images/02.head-icons/lofter_header_icon_%20(84).jpg" alt=""></a>
+                                </div>
+                                <div class="right">
+                                    <div class="pl">
+                                        <p>cospaly</p>
+                                        <p>89965 人订阅</p>
+                                    </div>
+                                    <div class="pr">
+                                        <a href="#">订阅</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class=item>
+                                <div class="left">
+                                    <a href="#"><img src="./images/02.head-icons/lofter_header_icon_%20(84).jpg" alt=""></a>
+                                </div>
+                                <div class="right">
+                                    <div class="pl">
+                                        <p>cospaly</p>
+                                        <p>89965 人订阅</p>
+                                    </div>
+                                    <div class="pr">
+                                        <a href="#">订阅</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class=item>
+                                <div class="left">
+                                    <a href="#"><img src="./images/02.head-icons/lofter_header_icon_%20(84).jpg" alt=""></a>
+                                </div>
+                                <div class="right">
+                                    <div class="pl">
+                                        <p>cospaly</p>
+                                        <p>89965 人订阅</p>
+                                    </div>
+                                    <div class="pr">
+                                        <a href="#">订阅</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class=item>
+                                <div class="left">
+                                    <a href="#"><img src="./images/02.head-icons/lofter_header_icon_%20(84).jpg" alt=""></a>
+                                </div>
+                                <div class="right">
+                                    <div class="pl">
+                                        <p>cospaly</p>
+                                        <p>89965 人订阅</p>
+                                    </div>
+                                    <div class="pr">
+                                        <a href="#">订阅</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class=item>
+                                <div class="left">
+                                    <a href="#"><img src="./images/02.head-icons/lofter_header_icon_%20(84).jpg" alt=""></a>
+                                </div>
+                                <div class="right">
+                                    <div class="pl">
+                                        <p>cospaly</p>
+                                        <p>89965 人订阅</p>
+                                    </div>
+                                    <div class="pr">
+                                        <a href="#">订阅</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class=item>
+                                <div class="left">
+                                    <a href="#"><img src="./images/02.head-icons/lofter_header_icon_%20(84).jpg" alt=""></a>
+                                </div>
+                                <div class="right">
+                                    <div class="pl">
+                                        <p>cospaly</p>
+                                        <p>89965 人订阅</p>
+                                    </div>
+                                    <div class="pr">
+                                        <a href="#">订阅</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class=item>
+                                <div class="left">
+                                    <a href="#"><img src="./images/02.head-icons/lofter_header_icon_%20(84).jpg" alt=""></a>
+                                </div>
+                                <div class="right">
+                                    <div class="pl">
+                                        <p>cospaly</p>
+                                        <p>89965 人订阅</p>
+                                    </div>
+                                    <div class="pr">
+                                        <a href="#">订阅</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class=item>
+                                <div class="left">
+                                    <a href="#"><img src="./images/02.head-icons/lofter_header_icon_%20(84).jpg" alt=""></a>
+                                </div>
+                                <div class="right">
+                                    <div class="pl">
+                                        <p>cospaly</p>
+                                        <p>89965 人订阅</p>
+                                    </div>
+                                    <div class="pr">
+                                        <a href="#">订阅</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items">
+                            <div class=item>
+                                <div class="left">
+                                    <a href="#"><img src="./images/02.head-icons/lofter_header_icon_%20(84).jpg" alt=""></a>
+                                </div>
+                                <div class="right">
+                                    <div class="pl">
+                                        <p>cospaly</p>
+                                        <p>89965 人订阅</p>
+                                    </div>
+                                    <div class="pr">
+                                        <a href="#">订阅</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--消息区域-->
+        <div class="swiper-slide slideB">
+
+            <div class="top">
+                <input type="search" placeholder="搜索用户、标签、标题">
+            </div>
+
+            <!--内容区域-->
+            <div class="content">
+                <!--banner轮播图-->
+                <div class="banner-swiper-container swiper-container">
+                    <div class="banner-swiper-pagination swiper-pagination"></div>
+
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./images/05.banner/banner1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./images/05.banner/banner2.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./images/05.banner/banner3.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./images/05.banner/banner4.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./images/05.banner/banner5.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./images/05.banner/banner6.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./images/05.banner/banner7.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./images/05.banner/banner8.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./images/05.banner/banner9.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#">
+                                <img src="./images/05.banner/banner10.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--3d轮播图-->
+                <div class="slideB-coverflow-container swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <h2>穿搭</h2>
+                            <div class="coverflow-pic">
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(184).jpg" alt=""></div>
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(128).jpg" alt=""></div>
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(864).jpg" alt=""></div>
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(567).jpg" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>穿搭</h2>
+                            <div class="coverflow-pic">
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(284).jpg" alt=""></div>
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(228).jpg" alt=""></div>
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(264).jpg" alt=""></div>
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(267).jpg" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>穿搭</h2>
+                            <div class="coverflow-pic">
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(384).jpg" alt=""></div>
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(328).jpg" alt=""></div>
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(364).jpg" alt=""></div>
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(367).jpg" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>穿搭</h2>
+                            <div class="coverflow-pic">
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(484).jpg" alt=""></div>
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(428).jpg" alt=""></div>
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(464).jpg" alt=""></div>
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(467).jpg" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>穿搭</h2>
+                            <div class="coverflow-pic">
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(584).jpg" alt=""></div>
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(528).jpg" alt=""></div>
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(564).jpg" alt=""></div>
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(567).jpg" alt=""></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>穿搭</h2>
+                            <div class="coverflow-pic">
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(684).jpg" alt=""></div>
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(628).jpg" alt=""></div>
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(664).jpg" alt=""></div>
+                                <div class="pic"><img src="./images/02.head-icons/lofter_header_icon_%20(667).jpg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--达人推荐区域-->
+                <div class="master-container">
+                    <!--.master-container>h2{达人推荐}+ul>li*6>a[href='javascript:void(0)']>img[src='images/02.head-icons/lofter_header_icon_ (182).jpg']+p{岚草}+p{二次元达人}-->
+                    <h2>达人推荐</h2>
+                    <ul>
+                        <li><a href="javascript:void(0)"><img src="images/02.head-icons/lofter_header_icon_ (181).jpg"
+                                                              alt="">
+                            <p>岚草</p>
+                            <p>二次元达人</p>
+                        </a></li>
+                        <li><a href="javascript:void(0)"><img src="images/02.head-icons/lofter_header_icon_ (182).jpg"
+                                                              alt="">
+                            <p>岚草</p>
+                            <p>二次元达人</p>
+                        </a></li>
+                        <li><a href="javascript:void(0)"><img src="images/02.head-icons/lofter_header_icon_ (183).jpg"
+                                                              alt="">
+                            <p>岚草</p>
+                            <p>二次元达人</p>
+                        </a></li>
+                        <li><a href="javascript:void(0)"><img src="images/02.head-icons/lofter_header_icon_ (184).jpg"
+                                                              alt="">
+                            <p>岚草</p>
+                            <p>二次元达人</p>
+                        </a></li>
+                        <li><a href="javascript:void(0)"><img src="images/02.head-icons/lofter_header_icon_ (185).jpg"
+                                                              alt="">
+                            <p>岚草</p>
+                            <p>二次元达人</p>
+                        </a></li>
+                        <li><a href="javascript:void(0)"><img src="images/02.head-icons/lofter_header_icon_ (186).jpg"
+                                                              alt="">
+                            <p>岚草</p>
+                            <p>二次元达人</p>
+                        </a></li>
+                    </ul>
+                    <div class="more">
+                        <a href="#">查看更多达人&gt;</a>
+                    </div>
+                </div>
+                <!--文章区域-->
+                <div class="essay">
+                    <h2>文章推荐</h2>
+                    <div class="essay-content">
+                        <div class="time">
+                            <h5>一手好BUG</h5>
+                            写的一手好BUG写的一手好BUG写的一手好BUG写的一手好BUG写的一手好BUG
+                        </div>
+                        <div class="time">
+                            <img src="./images/02.head-icons/lofter_header_icon_%20(69).jpg" alt="">
+                        </div>
+                        <div class="time">
+                            <h5>一手好BUG</h5>
+                            写的一手好BUG写的一手好BUG写的一手好BUG写的一手好BUG写的一手好BUG
+                        </div>
+                        <div class="time">
+                            <img src="./images/02.head-icons/lofter_header_icon_%20(777).jpg" alt="">
+                        </div>
+                        <div class="time">
+                            <h5>一手好BUG</h5>
+                            写的一手好BUG写的一手好BUG写的一手好BUG写的一手好BUG写的一手好BUG
+                            写的一手好BUG写的一手好BUG写的一手好BUG写的一手好BUG写的一手好BUG
+                        </div>
+                        <div class="time">
+                            <img src="./images/02.head-icons/lofter_header_icon_%20(888).jpg" alt="">
+                        </div>
+                        <div class="time">
+                            <img src="./images/02.head-icons/lofter_header_icon_%20(469).jpg" alt="">
+                        </div>
+                        <div class="time">
+                            <img src="./images/02.head-icons/lofter_header_icon_%20(439).jpg" alt="">
+                        </div>
+                        <div class="time">
+                            <img src="./images/02.head-icons/lofter_header_icon_%20(169).jpg" alt="">
+                        </div>
+                        <div class="time">
+                            <img src="./images/02.head-icons/lofter_header_icon_%20(459).jpg" alt="">
+                        </div>
+                        <div class="time">
+                            <img src="./images/02.head-icons/lofter_header_icon_%20(669).jpg" alt="">
+                        </div>
+                        <div class="time">
+                            <img src="./images/02.head-icons/lofter_header_icon_%20(979).jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--发现区域-->
+        <div class="swiper-slide slideC">
+            <div class="swiper-container slideC-container">
+                <!--消息分页器-->
+                <div id="slideC-pagination" class="slideC-pagination swiper-pagination"></div>
+                <div class="swiper-wrapper">
+                    <!--动态-->
+                    <div class="swiper-slide">
+                        <div class="section">
+                            <div class="section-l">
+                                <img src="./images/02.head-icons/lofter_header_icon_%20(57).jpg" alt="">
+                            </div>
+                            <div class="section-r">
+                                <h3>嗜血、魔约</h3>
+                                <p>1小时前</p>
+                                <div class="section-r-content">
+                                    <div class="time">写的一手好BUG写的一手好BUG写的一手好BUG写的一手好BUG</div>
+                                    <div class="time">写的一手好BUG写的一手好BUG写的一手好BUG写的一手好BUG</div>
+                                    <div class="time">写的一手好BUG写的一手好BUG写的一手好BUG写的一手好BUG</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div class="section-l">
+                                <img src="./images/02.head-icons/lofter_header_icon_%20(57).jpg" alt="">
+                            </div>
+                            <div class="section-r">
+                                <h3>嗜血、魔约</h3>
+                                <p>1小时前</p>
+                                <div class="section-r-content">
+                                    <img src="./images/02.head-icons/lofter_header_icon_%20(65).jpg" alt="">
+                                    <img src="./images/02.head-icons/lofter_header_icon_%20(1008).jpg" alt="">
+                                    <img src="./images/02.head-icons/lofter_header_icon_%20(784).jpg" alt="">
+                                    <img src="./images/02.head-icons/lofter_header_icon_%20(783).jpg" alt="">
+                                    <img src="./images/02.head-icons/lofter_header_icon_%20(782).jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div class="section-l">
+                                <img src="./images/02.head-icons/lofter_header_icon_%20(57).jpg" alt="">
+                            </div>
+                            <div class="section-r">
+                                <h3>嗜血、魔约</h3>
+                                <p>1小时前</p>
+                                <div class="section-r-content">
+                                    <div class="time">写的一手好BUG写的一手好BUG写的一手好BUG写的一手好BUG</div>
+                                    <div class="time">写的一手好BUG写的一手好BUG写的一手好BUG写的一手好BUG</div>
+                                    <div class="time">写的一手好BUG写的一手好BUG写的一手好BUG写的一手好BUG</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div class="section-l">
+                                <img src="./images/02.head-icons/lofter_header_icon_%20(57).jpg" alt="">
+                            </div>
+                            <div class="section-r">
+                                <h3>嗜血、魔约</h3>
+                                <p>1小时前</p>
+                                <div class="section-r-content">
+                                    <img src="./images/02.head-icons/lofter_header_icon_%20(65).jpg" alt="">
+                                    <img src="./images/02.head-icons/lofter_header_icon_%20(1008).jpg" alt="">
+                                    <img src="./images/02.head-icons/lofter_header_icon_%20(784).jpg" alt="">
+                                    <img src="./images/02.head-icons/lofter_header_icon_%20(783).jpg" alt="">
+                                    <img src="./images/02.head-icons/lofter_header_icon_%20(782).jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section">
+                            <div class="section-l">
+                                <img src="./images/02.head-icons/lofter_header_icon_%20(57).jpg" alt="">
+                            </div>
+                            <div class="section-r">
+                                <h3>嗜血、魔约</h3>
+                                <p>1小时前</p>
+                                <div class="section-r-content">
+                                    <div class="time">写的一手好BUG写的一手好BUG写的一手好BUG写的一手好BUG</div>
+                                    <div class="time">写的一手好BUG写的一手好BUG写的一手好BUG写的一手好BUG</div>
+                                    <div class="time">写的一手好BUG写的一手好BUG写的一手好BUG写的一手好BUG</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--消息-->
+                    <div class="swiper-slide">
+                        <div class="top">
+                            <div class="section">
+                                <div class="section-l">
+                                    <img src="images/01.app-icons/message_new_fans.png" alt="">
+                                </div>
+                                <div class="section-r">
+                                    <p>新的粉丝</p>
+                                    <img src="./images/01.app-icons/recommmend_more_arrow.png" alt="">
+                                </div>
+                            </div>
+                            <div class="section">
+                                <div class="section-l">
+                                    <img src="images/01.app-icons/message_fav.png" alt="">
+                                </div>
+                                <div class="section-r">
+                                    <p>喜欢</p>
+                                    <img src="./images/01.app-icons/recommmend_more_arrow.png" alt="">
+                                </div>
+                            </div>
+                            <div class="section">
+                                <div class="section-l">
+                                    <img src="images/01.app-icons/message_new_notices.png" alt="">
+                                </div>
+                                <div class="section-r">
+                                    <p>评论</p>
+                                    <img src="./images/01.app-icons/recommmend_more_arrow.png" alt="">
+                                </div>
+                            </div>
+                            <div class="section">
+                                <div class="section-l">
+                                    <img src="images/01.app-icons/message_sys_notices.png" alt="">
+                                </div>
+                                <div class="section-r">
+                                    <p>通知</p>
+                                    <img src="./images/01.app-icons/recommmend_more_arrow.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <div class="line"></div>
+                            <div class="zt">专题</div>
+                        </div>
+                        <div class="bottom">
+                            <div class="lw">
+                                <img src="./images/02.head-icons/lofter_header_icon_%20(764).jpg" alt="">
+                                <p>用礼物雕刻温暖是时光</p>
+                            </div>
+                            <h2>查看更多专题</h2>
+                        </div>
+                    </div>
+                    <!--聊天-->
+                    <div class="swiper-slide">
+                        <div class="section">
+                            <div class="section-l">
+                                <img src="./images/02.head-icons/lofter_header_icon_%20(666).jpg" alt="">
+                            </div>
+                            <div class="section-r">
+                                <h2>LOFTER通知 <span>02-17</span></h2>
+                                <p>欢迎来到LOFTER，希望你每一次选择都不会</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--我的区域-->
+        <div class="swiper-slide slideD">
+            <div class="swiper-container slideD-container">
+                <div class="swiper-wrapper slideD-wrapper">
+                    <div class="swiper-slide slideD-slide">
+
+                        <div class="top">
+                            <div class="top-l">
+                                <img src="./images/02.head-icons/lofter_header_icon_%20(835).jpg" alt="">
+                            </div>
+                            <div class="top-r">
+                                <h2>我是一条夏天的鱼</h2>
+                                <p>ID: woshiyitiaoxiatiandeyu</p>
+                                <div class="box">
+                                    <a href="#">关注 6</a><a href="#">喜欢 2</a><a href="#">粉丝 0</a>
+                                </div>
+                            </div>
+                            <img class="img" src="./images/01.app-icons/recommmend_more_arrow_hover.png" alt="">
+                        </div>
+
+                        <div class="center">
+                            <div class="center-l">
+                                <div class="center-l-img">
+                                    <img src="./images/01.app-icons/chrismas_2.png" alt="'">
+                                </div>
+                                <div class="center-l-info">
+                                    <h4>福利集市</h4>
+                                    <p>+1</p>
+                                </div>
+                            </div>
+                            <div class="center-r">
+                                <div class="center-r-img">
+                                    <img src="./images/01.app-icons/ic_logo_rect.png" alt="">
+                                </div>
+                                <div class="center-r-info">
+                                    <h4>乐乎印品</h4>
+                                    <p>照片印出来更美啊</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bottom">
+                            <div class="content">
+                                <div class="content-l">
+                                    <img src="./images/01.app-icons/my_uapp_icon.png" alt="">
+                                </div>
+                                <div class="content-r">
+                                    <p>个人应用</p>
+                                    <img src="./images/01.app-icons/recommmend_more_arrow.png" alt="">
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="content-l">
+                                    <img src="./images/01.app-icons/my_photography_icon.png" alt="">
+                                </div>
+                                <div class="content-r">
+                                    <p>拍摄课堂</p>
+                                    <img src="./images/01.app-icons/recommmend_more_arrow.png" alt="">
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="content-l">
+                                    <img src="./images/01.app-icons/my_share_icon.png" alt="">
+                                </div>
+                                <div class="content-r">
+                                    <p>分享LOFTER APP</p>
+                                    <img src="./images/01.app-icons/recommmend_more_arrow.png" alt="">
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="content-l">
+                                    <img src="./images/01.app-icons/my_setting_icon.png" alt="">
+                                </div>
+                                <div class="content-r">
+                                    <p>设置</p>
+                                    <img src="./images/01.app-icons/recommmend_more_arrow.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 分页器 -->
+    <div id="root-swiper-pagination" class="root-swiper-pagination swiper-pagination"></div>
+    <!--中间的照相机-->
+    <a href="#" class="camera"></a>
+</div>
+</body>
+</html>
+<!--导入swiper的js-->
+<script src="lib/swiper/js/swiper.min.js"></script>
+<!--调用swiper的方法-->
+<script>
+    //顶级的swiper
+    var rootSwiper = new Swiper(".root-swiper-container", {
+        pagination: '.root-swiper-pagination',
+//        分页器可点
+        paginationClickable: true,
+    });
+
+    //首页的swiper
+    var homeSwiper = new Swiper(".slideA-container", {
+        pagination: '.slideA-pagination',
+//        分页器可点
+        paginationClickable: true,
+    });
+
+    //banner的swiper
+    var bannerSwiper = new Swiper(".banner-swiper-container", {
+        pagination: '.banner-swiper-pagination',
+//        分页器可点
+        paginationClickable: true,
+    });
+
+    //coverflow的swiper
+    var coverflowSwiper = new Swiper(".slideB-coverflow-container", {
+//        分页器可点
+        paginationClickable: true,
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflow: {
+            rotate: 0,
+            stretch: -50,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+        }
+    });
+
+    //消息的swiper
+    var infoSwiper = new Swiper(".slideC-container", {
+        pagination: '.slideC-pagination',
+//        分页器可点
+        paginationClickable: true,
+    });
+
+    //我的区域swiper
+    var myswiper = new Swiper('.slideD-container', {
+//        scrollbar: '.swiper-scrollbar',
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        mousewheelControl: true,
+        freeMode: true,
+        roundLengths : true, //防止文字模糊
+    });
+
+</script>

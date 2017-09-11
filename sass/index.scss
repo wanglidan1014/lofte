@@ -1,0 +1,776 @@
+// 引入 其他的scss
+@import 'normalize6.0.scss';
+@import 'base.scss';
+
+//抽取函数 来实现rem的转换
+@function p2r($size) {
+  @return ($size/64*1rem)
+}
+
+//设置高度为100%
+html, body, .root-swiper-container {
+  height: 100%;
+}
+
+//设置顶级swiper的样式
+.root-swiper-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  > .swiper-wrapper {
+    flex: 1;
+  }
+  > #root-swiper-pagination {
+    height: p2r(90);
+    //background-color: gray;
+    position: static;
+    span {
+      width: 20%;
+      //border: 1px solid #000;
+      margin: 0;
+      border-radius: 0;
+      height: 100%;
+      font-size: p2r(20);
+      position: absolute;
+      opacity: .5;
+    }
+    span::before {
+      bottom: p2r(14);
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      left: 0;
+    }
+    span:nth-of-type(1) {
+      left: 0;
+      background: url("../images/01.app-icons/bb_btn_home_select.png") no-repeat top center/p2r(38) p2r(40);
+      &::before {
+        content: '首页';
+      }
+    }
+    span:nth-of-type(2) {
+      left: 20%;
+      background: url("../images/01.app-icons/bb_btn_label_select.png") no-repeat top center/p2r(51) p2r(38);
+      &::before {
+        content: '消息';
+      }
+    }
+    span:nth-of-type(3) {
+      right: 20%;
+      background: url("../images/01.app-icons/bb_btn_message_select.png") no-repeat top center/p2r(40) p2r(42);
+      &::before {
+        content: '发现';
+      }
+    }
+    span:nth-of-type(4) {
+      right: 0;
+      background: url("../images/01.app-icons/bb_btn_account_select.png") no-repeat top center/p2r(40) p2r(40);
+      &::before {
+        content: '我的';
+      }
+    }
+    span.swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
+  //  照相机
+  > .camera {
+    position: absolute;
+    width: 20%;
+    height: p2r(90);
+    left: 40%;
+    background-color: skyblue;
+    bottom: p2r(10);
+    background: url("../images/01.app-icons/bb_btn_post_select.png") no-repeat center/p2r(90) p2r(60);
+  }
+}
+
+// 首页的 swiper的 样式
+.slideA-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column; // 设置分页器的外观
+  #slideA-pagination {
+    position: static;
+    height: p2r(80);
+    display: flex;
+    justify-content: center;
+    span {
+      width: p2r(214);
+      height: 100%;
+      border-radius: 0;
+      margin: 0;
+      font-size: p2r(34);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      opacity: 1;
+    }
+    span:nth-of-type(1)::before {
+      content: '关注';
+    }
+    span:nth-of-type(2)::before {
+      content: '订阅';
+    }
+    // span被选中时添加 底部的边线
+    span.swiper-pagination-bullet-active {
+      border-bottom: p2r(2) solid yellowgreen;
+    }
+  }
+  > .swiper-wrapper {
+    flex: 1; // 设置高度为自动
+    > .swiper-slide {
+      height: auto;
+      overflow: scroll;
+    }
+
+    > .swiper-slide:nth-child(2) {
+      background-color: #ededed;
+      padding-top: p2r(26);
+      h2 {
+        background-color: #fff;
+        font-size: p2r(25);
+        padding: p2r(23) 0 p2r(24) p2r(28);
+        border-bottom: 1px solid #ededed;
+      }
+      .items {
+        .item {
+          display: flex;
+          background-color: #fff;
+          .left {
+            width: p2r(126);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+              width: p2r(72);
+              height: p2r(72);
+              display: block;
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+          .right {
+            flex: 1;
+            border-bottom: 1px solid #ededed;
+            display: flex;
+            justify-content: space-between;
+            .pl {
+              p {
+                font-size: p2r(20);
+                margin-bottom: p2r(18);
+              }
+              p:nth-child(1) {
+                color: black;
+                margin-top: p2r(24);
+              }
+              p:nth-child(2) {
+                color: #b3b3b3;
+              }
+            }
+            .pr {
+              display: flex;
+              align-items: center;
+              border-bottom: 1px solid #ededed;
+              border-bottom: 0;
+              a {
+                width: p2r(84);
+                height: p2r(49);
+                display: block;
+                color: #9cb54b;
+                border: 1px solid #9cb54b;
+                font-size: p2r(22);
+                border-radius: p2r(25);
+                text-align: center;
+                line-height: p2r(49);
+                margin-right: p2r(25);
+                &:hover {
+                  background-color: #9cb54b;
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//消息区域的 swiper的 样式
+.slideB {
+  overflow: scroll;
+  .top {
+    padding: p2r(12) p2r(20);
+    input {
+      width: 100%;
+      height: p2r(60);
+      background-color: #eeeeee;
+      border-radius: p2r(10);
+      padding-left: p2r(160);
+    }
+  }
+  .content {
+    //banner轮播图
+    .banner-swiper-container {
+      a {
+        height: p2r(256);
+        width: 100%;
+        //display: block;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    //  3d轮播图
+    .slideB-coverflow-container {
+      //width: 100%;
+      height: p2r(705);
+      padding-top: p2r(36);
+      padding-bottom: p2r(77);
+      background-color: #eeeeee;
+      > .swiper-wrapper > .swiper-slide {
+        width: p2r(492);
+        height: p2r(592);
+        background-color: white;
+        font-size: p2r(200);
+        h2 {
+          font-size: p2r(34);
+          margin: p2r(30) 0 p2r(33) 0;
+          text-align: center;
+        }
+        .coverflow-pic {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          .pic {
+            width: p2r(240);
+            height: p2r(240);
+            margin-bottom: p2r(5);
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    //  达人推荐区域
+    .master-container {
+      h2 {
+        font-size: p2r(32);
+        color: #999;
+        margin-top: p2r(32);
+        margin-left: p2r(31);
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          width: 33.3333%;
+          padding: p2r(41) 0;
+          a {
+            width: 100%;
+            display: block;
+            text-align: center;
+            img {
+              width: p2r(176);
+              height: p2r(176);
+              border-radius: 50%;
+              margin: 0 auto;
+
+            }
+
+            p:nth-of-type(1) {
+              color: black;
+              font-size: p2r(30);
+              padding: p2r(17) 0;
+            }
+            p:nth-of-type(2) {
+              color: #9a9a9a;
+              font-size: p2r(26);
+            }
+          }
+        }
+      }
+      .more {
+        height: p2r(109);
+        border-top: 1px solid #dcdcdc;
+        text-align: center;
+        a {
+          font-size: p2r(32);
+          color: #a1c30f;
+        }
+      }
+    }
+    //  文章区域
+    .essay {
+      padding-top: p2r(40);
+      background-color: #eeeeee;
+      font-size: p2r(20);
+      h2 {
+        padding: p2r(32) 0;
+        padding-left: p2r(40);
+        color: #979797;
+        font-size: p2r(32);
+        background-color: #fff;
+      }
+      .essay-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: #fff;
+        .time {
+          width: 33.3333%;
+          height: p2r(212);
+          background-color: #ececec;
+          line-height: p2r(30);
+          overflow: hidden;
+          margin-top: p2r(5);
+          //padding-left:p2r(10);
+          h5 {
+            font-size: p2r(24);
+            font-weight: 700;
+            margin-top: p2r(15);
+            margin-left: p2r(10);
+          }
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 消息的 swiper的 样式
+.slideC-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  //overflow: scroll;
+  #slideC-pagination {
+    position: static;
+    height: p2r(80);
+    display: flex;
+    justify-content: space-between;
+    span {
+      opacity: 1;
+      height: 100%;
+      width: 33.3333%;
+      margin: 0;
+      border-radius: 0;
+      background-color: #fff;
+      font-size: p2r(34);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      //position: absolute;
+    }
+    span:nth-of-type(1)::before {
+      content: "动态";
+    }
+    span:nth-of-type(2)::before {
+      content: "消息";
+    }
+    span:nth-of-type(3)::before {
+      content: "聊天";
+    }
+    span.swiper-pagination-bullet-active {
+      border-bottom: p2r(2) solid yellowgreen;
+    }
+  }
+  > .swiper-wrapper {
+    flex: 1;
+    > .swiper-slide {
+      //height: auto;
+      overflow: scroll;
+    }
+  }
+
+  .swiper-slide:nth-of-type(1) {
+    .section {
+      display: flex;
+      //height: p2r(245);
+
+      .section-l {
+        width: p2r(105);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: p2r(20);
+        img {
+          width: p2r(72);
+          border-radius: 50%;
+          //padding-top:p2r(10);
+          //margin: 0;
+        }
+      }
+      .section-r {
+        flex: 1;
+        font-size: p2r(22);
+        border-bottom: 1px solid #ededed;
+        h3 {
+          padding-top: p2r(25);
+        }
+        p {
+          padding: p2r(18) 0;
+        }
+        .section-r-content {
+          display: flex;
+          flex-wrap: wrap;
+          .time {
+            width: p2r(122);
+            height: p2r(122);
+            background: #ededed;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin-left: p2r(6);
+            margin-bottom: p2r(18);
+          }
+          img {
+            width: p2r(122);
+            height: p2r(122);
+            margin-left: p2r(6);
+            margin-bottom: p2r(20);
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-slide:nth-of-type(2) {
+    background-color: #f2f5f4;
+
+    .top {
+      .section {
+        height: p2r(122);
+        display: flex;
+        background-color: #fff;
+        padding-bottom: p2r(41);
+        .section-l {
+          width: p2r(129);
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: p2r(54);
+            height: p2r(54);
+          }
+        }
+        .section-r {
+          flex: 1;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #eeeeee;
+          p {
+            font-size: p2r(27);
+            color: black;
+          }
+          img {
+            padding-right: p2r(27);
+            width: p2r(16);
+            height: p2r(25);
+            color: #c6c6c9;
+          }
+        }
+      }
+    }
+    .center {
+      width: 100%;
+      height: p2r(87);
+      position: relative;
+      .line {
+        width: 100%;
+        border: 1px solid #e9ebec;
+        position: absolute;
+        top: 50%;
+        left: 0;
+      }
+      .zt {
+        height: p2r(30);
+        width: p2r(84);
+        font-size: p2r(22);
+        background-color: #f2f5f4;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: p2r(-42);
+        margin-top: p2r(-15);
+        text-align: center;
+        line-height: p2r(30);
+        color: #9ea1a0;
+      }
+    }
+    .bottom {
+      width: 100%;
+      padding: 0 p2r(27);
+
+      .lw {
+        width: 90%;
+        height: p2r(160);
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        margin-bottom: p2r(27);
+        img {
+          width: p2r(188);
+          height: p2r(123);
+          margin-right: p2r(30);
+          border-radius: 15px;
+        }
+        p {
+          font-size: p2r(25);
+          font-weight: 900;
+        }
+      }
+      h2 {
+        width: 90%;
+        height: p2r(90);
+        text-align: center;
+        line-height: p2r(90);
+        color: #9ab815;
+        font-size: p2r(28);
+        background-color: #fff;
+      }
+    }
+  }
+
+  .swiper-slide:nth-of-type(3) {
+    background-color: #f2f5f4;
+    .section {
+      background-color: #fff;
+      width: 100%;
+      height: p2r(123);
+      display: flex;
+      .section-l {
+        width: p2r(139);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: p2r(90);
+          height: p2r(90);
+          border-radius: 50%;
+        }
+      }
+      .section-r {
+        flex: 1;
+        //display: flex;
+        //align-items: center;
+        font-size: p2r(24);
+        h2 {
+
+          color: black;
+          margin: p2r(25) 0 p2r(9) 0;
+          span {
+            float: right;
+            font-size: p2r(14);
+            color: #7c7c7c;
+            margin-right: p2r(21);
+          }
+        }
+        p {
+          color: #999999;
+        }
+      }
+    }
+  }
+}
+
+// 我的区域 swiper的 演示
+.slideD-container {
+  height: 100%;
+  background: url("../images/04.normal/self-bg.jpg");
+  display: flex;
+  flex-direction: column;
+  .top {
+    background-color: #fff;
+    height: p2r(240);
+    display: flex;
+    background-color: rgba(255,255,255,0.5);
+    .top-l {
+      width: p2r(196);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: p2r(143);
+        height: p2r(143);
+        border-radius: 50%;
+
+      }
+    }
+    .top-r {
+      box-sizing: border-box;
+      flex: 1;
+      //position: relative;
+      height: 100%;
+      padding-top: p2r(62);
+      h2 {
+        font-size: p2r(30);
+        margin-bottom: p2r(28);
+
+      }
+      p {
+        font-size: p2r(18);
+        margin-bottom: p2r(34);
+        color: #8f9292;
+      }
+      .box {
+        display: flex;
+        margin-right: p2r(120);
+        a {
+          font-size: p2r(22);
+          flex: 1;
+          color: black;
+        }
+      }
+    }
+    .img {
+      width: p2r(14);
+      height: p2r(22);
+      align-self: center;
+      color: #c7cccd;
+      //position: absolute;
+      //top: 50%;
+      //right: 20px;
+      //margin-top:p2r(-22);
+    }
+  }
+
+  .center {
+    background-color: #fff;
+    height: p2r(160);
+    display: flex;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    .center-l {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      border-right: 1px solid #dedede;
+      .center-l-img {
+        height: 100%;
+        width: p2r(135);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: p2r(80);
+          height: p2r(80);
+
+        }
+      }
+      .center-l-info {
+        flex: 1;
+        h4 {
+          font-size: p2r(28);
+          margin-top: p2r(50);
+          margin-bottom: p2r(18);
+          position: relative;
+          &::before {
+            content: '上新';
+            width: p2r(56);
+            height: p2r(27);
+            background-color: red;
+            color: #ffffff;
+            border-radius: p2r(27);
+            font-size: p2r(14);
+            text-align: center;
+            line-height: p2r(27);
+            position: absolute;
+            top: 0;
+            right: p2r(5);
+          }
+        }
+        p {
+          font-size: p2r(14);
+          color: yellowgreen;
+          background: url("../images/01.app-icons/welfare_new_count_icon.png") no-repeat left/p2r(40) p2r(40);
+          background-size: p2r(25);
+          padding-left: p2r(40);
+        }
+      }
+    }
+    .center-r {
+      flex: 1;
+      display: flex;
+      .center-r-img {
+        width: p2r(135);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: p2r(90);
+          height: p2r(90);
+
+        }
+      }
+      .center-r-info {
+        flex: 1;
+        h4 {
+          font-size: p2r(28);
+          margin-top: p2r(50);
+          margin-bottom: p2r(18);
+
+        }
+        p {
+          font-size: p2r(20);
+          color: #858585;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    height: 100%;
+    flex: 1;
+    background-color: #fff;
+    width: 100%;
+    > .content {
+      width: 100%;
+      height: p2r(90);
+      border-bottom: 1px solid #ededed;
+      display: flex;
+      .content-l {
+        width: p2r(92);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: p2r(40);
+          height: p2r(40);
+
+        }
+      }
+      .content-r {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+          font-size: p2r(29);
+        }
+        img {
+          width: p2r(18);
+          height: p2r(25);
+          margin-right: p2r(27);
+        }
+      }
+    }
+  }
+
+}
+
+
+
